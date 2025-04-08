@@ -51,13 +51,13 @@ public class WhatsAppStickersPlugin extends BroadcastReceiver implements MethodC
     @Override
     public void onMethodCall(MethodCall call, Result result) {
         switch (call.method) {
-            case "getPlatformVersion":
-                result.success("Android " + android.os.Build.VERSION.RELEASE);
-                break;
             case "isWhatsAppInstalled": {
                 result.success(WhitelistCheck.isWhatsAppInstalled(registrar.context()));
                 break;
             }
+            case "getPlatformVersion":
+                result.success("Android " + android.os.Build.VERSION.RELEASE);
+                break;
             case "isWhatsAppConsumerAppInstalled": {
                 result.success(WhitelistCheck.isWhatsAppConsumerAppInstalled(registrar.context().getPackageManager()));
                 break;
