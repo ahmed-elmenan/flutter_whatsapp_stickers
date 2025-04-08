@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * WhatsAppStickersPlugin
  */
-public class WhatsAppStickersPlugin extends BroadcastReceiver implements MethodCallHandler {
+public class WhatsAppStickersPlugin extends BroadcastReceiver implements FlutterPlugin, MethodCallHandler {
     private final String TAG = "WhatsAppStickersPlugin";
     private final Registrar registrar;
     private final MethodChannel channel;
